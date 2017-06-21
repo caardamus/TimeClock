@@ -18,7 +18,7 @@ func main() {
 	fmt.Println("User clock-in: ", myname)
 	fmt.Println("Clock in: ",now.Format(time.ANSIC)) //current time stamp
 
-	fileHandle, _ := os.OpenFile(myname, os.O_CREATE|os.O_APPEND, 0755) //creates and appends txt file
+	fileHandle, _ := os.OpenFile(myname +".txt", os.O_CREATE|os.O_APPEND, 0755) //creates and appends txt file
 	writer := bufio.NewWriter(fileHandle)
 	defer fileHandle.Close()
 
